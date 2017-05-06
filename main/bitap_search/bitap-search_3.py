@@ -1,4 +1,5 @@
 from main.bitap_search.pattern import Pattern
+from main.utils.constants import Constants
 
 
 class BitapSearch:
@@ -98,12 +99,16 @@ class BitapSearch:
                         end_pos = column_num
                         place = sequence[start_pos: end_pos]
                         mismatch_pos = [i for i, (left, right) in enumerate(zip(place, pattern.get_enzyme()))
-                                        if left != right]
-                        if mismatch_pos:
-                            new_matched_pattern = Pattern(pattern.get_enzyme(), pattern.get_names(), place, mismatch_pos)
-                            if new_matched_pattern not in res:
-                                res[new_matched_pattern] = list()
-                            res[new_matched_pattern].append(start_pos)
+                                        if not self.custom_letter_equals(left, right)]
+                        if mismatch_pos and (start_pos + mismatch_pos[0] - Constants.PRIMER_SIZE) > 0:
+                            if pattern.get_enzyme() not in res:
+                                new_matched_pattern = Pattern(pattern.get_enzyme(), pattern.get_names())
+                                res[pattern.get_enzyme()] = new_matched_pattern
+                            res[pattern.get_enzyme()].add_seq_place(place)
+                            res[pattern.get_enzyme()].add_mismatch_position(mismatch_pos)
+                            res[pattern.get_enzyme()].add_match_start_positions(start_pos)
+                            res[pattern.get_enzyme()].add_primers(sequence[start_pos + mismatch_pos[0] -
+                                                                           Constants.PRIMER_SIZE: start_pos + mismatch_pos[0]])
                     res_column >>= len(pattern.get_enzyme())
             self.print_table(table[k], self.summary_pattern_len)
         return res
@@ -130,6 +135,11 @@ class BitapSearch:
         elif nucleotide in self.multi_nucleotides[pattern_symbol]:
             return True
         return False
+
+    def custom_letter_equals(self, seq_symbol, enzyme_symbol):
+        if enzyme_symbol in self.multi_nucleotides.keys() and seq_symbol in self.multi_nucleotides[enzyme_symbol]:
+            return True
+        return seq_symbol == enzyme_symbol
 
     def generate_T(self):
         T = {}
@@ -163,12 +173,13 @@ class BitapSearch:
         return T1
 
 if __name__ == "__main__":
-    seq = 'CCGGAACGAATTCG'
+    seq = 'CCGGAACGAATTCGTG'
     max_err = 1
-    p1 = Pattern('GAA', ['name1'])
-    p2 = Pattern('CCTG', ['name2'])
+    p1 = Pattern('GAAN', ['name1', 'name11'])
+    p2 = Pattern('NCCT', ['name2'])
     p3 = Pattern('TAAG', ['name3'])
-    pats = [p1, p2, p3]
+    p4 = Pattern('GTG', ['name4'])
+    pats = [p1, p2, p3, p4]
     bsearch = BitapSearch(pats, max_err)
     res = bsearch.bitap_search(seq)
     for k, v in res.items():

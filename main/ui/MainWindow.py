@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import QMainWindow, QMessageBox, QLabel, QGridLayout, QWidg
 
 from main.aho_korasick.search import AhoKorasickSearch
 from main.aho_korasick_wildcard.wildcard_search import AhoKorasickWildcard
+from main.bitap_search.pattern import Pattern
 from main.utils.enzymes_reader import EnzymesReader
 
 
@@ -139,6 +140,7 @@ class MainWindow(QMainWindow):
         search_action = QAction(QIcon(self.IMAGES_PATH + 'search.png'), "&Search for enzymes", self)
         search_action.triggered.connect(self.on_search_btn_clicked)
         build_primers_action = QAction(QIcon(self.IMAGES_PATH + 'build.png'), "&Build Primers", self)
+        build_primers_action.triggered.connect(self.on_build_primers_btn_clicked)
         toolbar.addAction(search_action)
         toolbar.addAction(build_primers_action)
 
@@ -195,6 +197,13 @@ class MainWindow(QMainWindow):
             search_results_wildcard = self.search_engine_wildcard.do_neb_search(sequence_text)
         results_for_table = TransformationHelper.transform_results(search_results, search_results_wildcard)
         self.show_search_results_table(results_for_table)
+
+    def on_build_primers_btn_clicked(self):
+        self.statusBar().showMessage("Build primers")
+        sequence_text = self.seq_line_edit.toPlainText().replace(" ", "").replace('\n', '')
+        current_tab = self.tabs.currentIndex()
+        if current_tab == 1:  # SibTab
+            pass
 
     def show_search_results_table(self, search_results):
         header_labels = ['Name', 'Sequence', 'Site Length', 'Frequency', 'Cut Positions']
