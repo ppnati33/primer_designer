@@ -1,3 +1,3 @@
 class Constants:
 
-    PRIMER_SIZE = 7
+    PRIMER_SIZE = 28

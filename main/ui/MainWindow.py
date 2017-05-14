@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import QMainWindow, QMessageBox, QLabel, QGridLayout, QWidg
 from main.aho_korasick.search import AhoKorasickSearch
 from main.aho_korasick_wildcard.wildcard_search import AhoKorasickWildcard
 from main.bitap_search.pattern import Pattern
+from main.bitap_search.bitap_search import BitapSearch
 from main.utils.enzymes_reader import EnzymesReader
 
 
@@ -33,6 +34,12 @@ class MainWindow(QMainWindow):
                                                self.enzymes_reader.get_neb_simple_pattens())
         self.search_engine_wildcard = AhoKorasickWildcard(self.enzymes_reader.get_syb_wildcard_patterns(),
                                                           self.enzymes_reader.get_neb_wildcard_patterns())
+        p1 = Pattern('GAA', ['name1', 'name11'])
+        p2 = Pattern('NCCT', ['name2'])
+        p3 = Pattern('TAAG', ['name3'])
+        p4 = Pattern('GTG', ['name4'])
+        pats = [p1, p2, p3, p4]
+        self.build_primers_engine = BitapSearch(pats, 1)
         self.init_ui()
 
     def init_ui(self):
@@ -203,7 +210,11 @@ class MainWindow(QMainWindow):
         sequence_text = self.seq_line_edit.toPlainText().replace(" ", "").replace('\n', '')
         current_tab = self.tabs.currentIndex()
         if current_tab == 1:  # SibTab
+            primers_results = self.build_primers_engine.bitap_search(sequence_text)
+        # TODO: Neb tab
+        if current_tab == 0:  # NebTab
             pass
+        self.show_build_primers_results_table(primers_results)
 
     def show_search_results_table(self, search_results):
         header_labels = ['Name', 'Sequence', 'Site Length', 'Frequency', 'Cut Positions']
@@ -219,6 +230,36 @@ class MainWindow(QMainWindow):
             self.table_widget.setItem(index, 2, QTableWidgetItem(str(site_item.get_site_length())))
             self.table_widget.setItem(index, 3, QTableWidgetItem(str(site_item.get_frequency())))
             self.table_widget.setItem(index, 4, QTableWidgetItem(str(site_item.get_cut_positions())))
+
+    def show_build_primers_results_table(self, primers_results):
+        header_labels = ['Names', 'Enzyme', 'Enzyme with mutation', 'Enzyme mutation position', 'Enzyme start position',
+                         'Primer', 'Primer start position']
+        row_count = 0
+        for enzyme, mutated_enzymes in primers_results.items():
+            row_count += len(mutated_enzymes)
+        self.table_widget.setRowCount(row_count)
+        self.table_widget.setColumnCount(7)
+        self.table_widget.setHorizontalHeaderLabels(header_labels)
+        index = -1
+        for enzyme, mutated_enzymes in primers_results.items():
+            # index = pr_results.index(site_item)
+            row_count += len(mutated_enzymes)
+            for found_mutated_enzyme in mutated_enzymes:
+                index += 1
+                self.table_widget.setItem(index, 0, QTableWidgetItem(str(enzyme.get_names())))
+                self.table_widget.setItem(index, 1, QTableWidgetItem(enzyme.get_enzyme()))
+                self.table_widget.setItem(index, 2, QTableWidgetItem(found_mutated_enzyme.get_enzyme_with_mutation()))
+                self.table_widget.setItem(index, 3, QTableWidgetItem(str(found_mutated_enzyme
+                                                                         .get_enzyme_mutation_position())))
+                self.table_widget.setItem(index, 4, QTableWidgetItem(str(found_mutated_enzyme
+                                                                         .get_enzyme_start_position())))
+                primer = found_mutated_enzyme.get_primer()
+                self.table_widget.setItem(index, 5, QTableWidgetItem(primer.get_primer_sequence()))
+                self.table_widget.setItem(index, 6, QTableWidgetItem(str(primer.get_primer_start_position())))
+        self.table_widget.resizeRowsToContents()
+        self.table_widget.resizeColumnsToContents()
+        horizontal_header = self.table_widget.horizontalHeader()
+        horizontal_header.setStretchLastSection(True)
 
 if __name__ == "__main__":
     import sys
