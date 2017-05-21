@@ -7,11 +7,12 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QLabel, QGridLayout, QWidget, qApp, QAction, QGroupBox, \
     QHBoxLayout, QVBoxLayout, QListWidget, QLineEdit, QPushButton, QTabWidget, QTableWidget, QTableWidgetItem, \
     QTextEdit
+from PyQt5.QtWidgets import QSpinBox
 
 from main.aho_korasick.search import AhoKorasickSearch
 from main.aho_korasick_wildcard.wildcard_search import AhoKorasickWildcard
-from main.bitap_search.pattern import Pattern
-from main.bitap_search.bitap_search import BitapSearch
+# from main.bitap_search.pattern import Pattern
+from main.bitap_search.custom_bitap import CustomBitapSearch
 from main.utils.enzymes_reader import EnzymesReader
 
 
@@ -29,17 +30,19 @@ class MainWindow(QMainWindow):
         self.tabs = QTabWidget()
         self.seq_line_edit = QTextEdit()
         self.table_widget = QTableWidget()
+        self.mutationPosition = QSpinBox(self)
         self.enzymes_reader = EnzymesReader()
         self.search_engine = AhoKorasickSearch(self.enzymes_reader.get_sib_simple_patterns(),
                                                self.enzymes_reader.get_neb_simple_pattens())
-        self.search_engine_wildcard = AhoKorasickWildcard(self.enzymes_reader.get_syb_wildcard_patterns(),
+        self.search_engine_wildcard = AhoKorasickWildcard(self.enzymes_reader.get_sib_wildcard_patterns(),
                                                           self.enzymes_reader.get_neb_wildcard_patterns())
-        p1 = Pattern('GAA', ['name1', 'name11'])
-        p2 = Pattern('NCCT', ['name2'])
-        p3 = Pattern('TAAG', ['name3'])
-        p4 = Pattern('GTG', ['name4'])
-        pats = [p1, p2, p3, p4]
-        self.build_primers_engine = BitapSearch(pats, 1)
+        # p1 = Pattern('GAA', ['name1', 'name11'])
+        # p2 = Pattern('NCCT', ['name2'])
+        # p3 = Pattern('TAAG', ['name3'])
+        # p4 = Pattern('GTG', ['name4'])
+        # pats = [p1, p2, p3, p4]
+        self.build_primers_engine = CustomBitapSearch(self.enzymes_reader.get_all_sib_patterns(), 2)
+        self.build_primers_engine_neb = CustomBitapSearch(self.enzymes_reader.get_all_neb_patterns(), 2)
         self.init_ui()
 
     def init_ui(self):
@@ -65,8 +68,8 @@ class MainWindow(QMainWindow):
 
         # Create first, second tab
         # TODO: use getters
-        self.create_enzymes_list(tab_neb, self.enzymes_reader.get_sib_enzymes_data())
-        self.create_enzymes_list(tab_sib, self.enzymes_reader.get_neb_enzymes_data())
+        self.create_enzymes_list(tab_neb, self.enzymes_reader.get_neb_enzymes_data())
+        self.create_enzymes_list(tab_sib, self.enzymes_reader.get_sib_enzymes_data())
         # Add tabs to widget
         main_layout.addWidget(self.tabs, 1)
 
@@ -79,7 +82,7 @@ class MainWindow(QMainWindow):
         seq_group_box = QGroupBox("Enter a sequence:")
         seq_group_box.setFont(font_9_pt)
         seq_layout = QHBoxLayout()
-        #self.seq_line_edit = QTextEdit()
+        self.seq_line_edit.cursorPositionChanged.connect(self.cursor_position)
         seq_layout.addWidget(self.seq_line_edit)
         # seq_grid_layout = QGridLayout()
         # seq_grid_layout.setSpacing(10)
@@ -101,19 +104,6 @@ class MainWindow(QMainWindow):
 
         seq_group_box.setLayout(seq_layout)
         right_layout.addWidget(seq_group_box, 1)
-
-        # Create table
-        # self.table_widget = QTableWidget()
-        # self.table_widget.setRowCount(4)
-        # self.table_widget.setColumnCount(2)
-        # self.table_widget.setItem(0, 0, QTableWidgetItem("Cell (1,1)"))
-        # self.table_widget.setItem(0, 1, QTableWidgetItem("Cell (1,2)"))
-        # self.table_widget.setItem(1, 0, QTableWidgetItem("Cell (2,1)"))
-        # self.table_widget.setItem(1, 1, QTableWidgetItem("Cell (2,2)"))
-        # self.table_widget.setItem(2, 0, QTableWidgetItem("Cell (3,1)"))
-        # self.table_widget.setItem(2, 1, QTableWidgetItem("Cell (3,2)"))
-        # self.table_widget.setItem(3, 0, QTableWidgetItem("Cell (4,1)"))
-        # self.table_widget.setItem(3, 1, QTableWidgetItem("Cell (4,2)"))
 
         right_layout.addWidget(self.table_widget, 4)
 
@@ -144,12 +134,45 @@ class MainWindow(QMainWindow):
 
     def create_tool_bar(self):
         toolbar = self.addToolBar('ToolBar')
-        search_action = QAction(QIcon(self.IMAGES_PATH + 'search.png'), "&Search for enzymes", self)
+
+        cutAction = QAction(QtGui.QIcon(self.IMAGES_PATH + 'cut.png'), "Cut to clipboard", self)
+        cutAction.setStatusTip("Delete and copy text to clipboard")
+        cutAction.setShortcut("Ctrl+X")
+        cutAction.triggered.connect(self.seq_line_edit.cut)
+
+        copyAction = QAction(QtGui.QIcon(self.IMAGES_PATH + "copy.png"), "Copy to clipboard", self)
+        copyAction.setStatusTip("Copy text to clipboard")
+        copyAction.setShortcut("Ctrl+C")
+        copyAction.triggered.connect(self.seq_line_edit.copy)
+
+        pasteAction = QAction(QtGui.QIcon(self.IMAGES_PATH + "paste.png"), "Paste from clipboard", self)
+        pasteAction.setStatusTip("Paste text from clipboard")
+        pasteAction.setShortcut("Ctrl+V")
+        pasteAction.triggered.connect(self.seq_line_edit.paste)
+
+        toolbar.addAction(cutAction)
+        toolbar.addAction(copyAction)
+        toolbar.addAction(pasteAction)
+        toolbar.addSeparator()
+
+        positionLabel = QLabel("Enter position: ", self)
+        self.mutationPosition.setMinimum(0)
+        self.mutationPosition.setMaximum(50000)
+        self.mutationPosition.setValue(0)
+        toolbar.addWidget(positionLabel)
+        toolbar.addWidget(self.mutationPosition)
+
+        search_action = QAction(QIcon(self.IMAGES_PATH + 'find.png'), "&Search for restriction sites", self)
+        search_action.setStatusTip("Search for restriction sites")
         search_action.triggered.connect(self.on_search_btn_clicked)
-        build_primers_action = QAction(QIcon(self.IMAGES_PATH + 'build.png'), "&Build Primers", self)
+
+        build_primers_action = QAction(QIcon(self.IMAGES_PATH + 'primers.png'), "&Build primers", self)
+        build_primers_action.setStatusTip("Build primers")
         build_primers_action.triggered.connect(self.on_build_primers_btn_clicked)
+
         toolbar.addAction(search_action)
         toolbar.addAction(build_primers_action)
+        #toolbar.addSeparator()
 
     def create_enzymes_list(self, tab, enzymes_data):
         # enzymes_list = QListWidget()
@@ -191,7 +214,7 @@ class MainWindow(QMainWindow):
 
     def on_search_btn_clicked(self):
         # search_btn = self.sender()
-        self.statusBar().showMessage("Search for enzymes")
+        self.statusBar().showMessage("Search for restriction sites")
         sequence_text = self.seq_line_edit.toPlainText().replace(" ", "").replace('\n', '')
         current_tab = self.tabs.currentIndex()
         # TODO: create the same for NEB tab
@@ -207,13 +230,14 @@ class MainWindow(QMainWindow):
 
     def on_build_primers_btn_clicked(self):
         self.statusBar().showMessage("Build primers")
+        mpos_value = self.mutationPosition.value() - 1
         sequence_text = self.seq_line_edit.toPlainText().replace(" ", "").replace('\n', '')
         current_tab = self.tabs.currentIndex()
         if current_tab == 1:  # SibTab
-            primers_results = self.build_primers_engine.bitap_search(sequence_text)
+            primers_results = self.build_primers_engine.bitap_search(sequence_text, mpos_value)
         # TODO: Neb tab
         if current_tab == 0:  # NebTab
-            pass
+            primers_results = self.build_primers_engine_neb.bitap_search(sequence_text, mpos_value)
         self.show_build_primers_results_table(primers_results)
 
     def show_search_results_table(self, search_results):
@@ -232,34 +256,46 @@ class MainWindow(QMainWindow):
             self.table_widget.setItem(index, 4, QTableWidgetItem(str(site_item.get_cut_positions())))
 
     def show_build_primers_results_table(self, primers_results):
-        header_labels = ['Names', 'Enzyme', 'Enzyme with mutation', 'Enzyme mutation position', 'Enzyme start position',
-                         'Primer', 'Primer start position']
+        header_labels = ['Site Names', 'Sequence', 'Site with mismatch', 'Site start position', 'Mismatch positions',
+                         'Primer', 'Primer type']
         row_count = 0
-        for enzyme, mutated_enzymes in primers_results.items():
-            row_count += len(mutated_enzymes)
+        for site, mismatched_sites in primers_results.items():
+            row_count += len(mismatched_sites)
         self.table_widget.setRowCount(row_count)
         self.table_widget.setColumnCount(7)
         self.table_widget.setHorizontalHeaderLabels(header_labels)
         index = -1
-        for enzyme, mutated_enzymes in primers_results.items():
+        for site, mismatched_sites in primers_results.items():
             # index = pr_results.index(site_item)
-            row_count += len(mutated_enzymes)
-            for found_mutated_enzyme in mutated_enzymes:
+            row_count += len(mismatched_sites)
+            for found_mismatched_site in mismatched_sites:
                 index += 1
-                self.table_widget.setItem(index, 0, QTableWidgetItem(str(enzyme.get_names())))
-                self.table_widget.setItem(index, 1, QTableWidgetItem(enzyme.get_enzyme()))
-                self.table_widget.setItem(index, 2, QTableWidgetItem(found_mutated_enzyme.get_enzyme_with_mutation()))
-                self.table_widget.setItem(index, 3, QTableWidgetItem(str(found_mutated_enzyme
-                                                                         .get_enzyme_mutation_position())))
-                self.table_widget.setItem(index, 4, QTableWidgetItem(str(found_mutated_enzyme
-                                                                         .get_enzyme_start_position())))
-                primer = found_mutated_enzyme.get_primer()
+                self.table_widget.setItem(index, 0, QTableWidgetItem(str(site.get_names())))
+                self.table_widget.setItem(index, 1, QTableWidgetItem(site.get_seq()))
+                self.table_widget.setItem(index, 2, QTableWidgetItem(found_mismatched_site.get_enzyme_with_mismatch()))
+                self.table_widget.setItem(index, 3, QTableWidgetItem(str(found_mismatched_site
+                                                                         .get_start_pos() + 1)))
+                self.table_widget.setItem(index, 4, QTableWidgetItem(str([pos + 1 for pos in found_mismatched_site
+                                                                         .get_mismatch_positions()])))
+                primer = found_mismatched_site.get_primer()
                 self.table_widget.setItem(index, 5, QTableWidgetItem(primer.get_primer_sequence()))
-                self.table_widget.setItem(index, 6, QTableWidgetItem(str(primer.get_primer_start_position())))
+                primer_type = ("Forward" if primer.get_is_forward() else "Reverse")
+                self.table_widget.setItem(index, 6, QTableWidgetItem(primer_type))
         self.table_widget.resizeRowsToContents()
         self.table_widget.resizeColumnsToContents()
         horizontal_header = self.table_widget.horizontalHeader()
         horizontal_header.setStretchLastSection(True)
+
+    def cursor_position(self):
+        cursor_pos = self.seq_line_edit.textCursor().position()
+        seq = self.seq_line_edit.toPlainText()
+        seq_part = seq[:cursor_pos].replace(" ", "").replace('\n', '')
+        pos = len(seq_part)
+        # Mortals like 1-indexed things
+        # line = cursor.blockNumber() + 1
+        # col = cursor.columnNumber()
+        self.statusBar().showMessage("Cursor position: {}".format(pos))
+
 
 if __name__ == "__main__":
     import sys

@@ -8,6 +8,7 @@ from main.utils.transformation_helper import TransformationHelper
 
 class EnzymesReader:
     # SIB_ENZYMES_XML_PATH = '../../resources/static/xml/syb_enzymes.xml'
+    # NEB_ENZYMES_XML_PATH = '../../resources/static/xml/neb_enzymes.xml'
     SIB_ENZYMES_XML_PATH = 'resources/static/xml/syb_enzymes.xml'
     NEB_ENZYMES_XML_PATH = 'resources/static/xml/neb_enzymes.xml'
 
@@ -57,7 +58,7 @@ class EnzymesReader:
         simple_patterns = self.process_multi_nucleotides(enzymes_seq_names)
         return simple_patterns
 
-    def get_syb_wildcard_patterns(self):
+    def get_sib_wildcard_patterns(self):
         return self.get_wildcard_patterns(self.all_sib_enzymes_data)
 
     def get_neb_wildcard_patterns(self):
@@ -88,26 +89,45 @@ class EnzymesReader:
         wildcard_patterns = self.process_multi_nucleotides(enzymes_seq_names)
         return wildcard_patterns
 
+    def get_all_sib_patterns(self):
+        return self.get_all_patterns(self.all_sib_enzymes_data)
+
+    def get_all_neb_patterns(self):
+        return self.get_all_patterns(self.all_neb_enzymes_data)
+
+    def get_all_patterns(self, enzymes_list):
+        patterns = {}
+        for enzyme in enzymes_list:
+            sequence = enzyme.get_top_site()
+            e_name = enzyme.get_e_name()
+            if sequence.find('N') != -1:
+                sequence = sequence.replace('(N)', '')
+                start_digit_pos = 0
+                digits = []
+                while start_digit_pos < len(sequence):
+                    if sequence[start_digit_pos].isdigit():
+                        end_digit_pos = start_digit_pos + 1
+                        while sequence[end_digit_pos].isdigit():
+                            end_digit_pos += 1
+                        digits.append(sequence[start_digit_pos:end_digit_pos])
+                        start_digit_pos = end_digit_pos
+                    else:
+                        start_digit_pos += 1
+                sequence = self.replace_all_digits_by_n(sequence, digits)
+            sequence = sequence.replace('↑', '')
+            if sequence in patterns:
+                patterns[sequence].add_name(e_name)
+            else:
+                p = Pattern(sequence, [e_name])
+                patterns[sequence] = p
+        return list(patterns.values())
+
+
     def replace_all_digits_by_n(self, sequence, digits):
         for digit in digits:
             n_seq = 'N' * int(digit)
             sequence = sequence.replace(digit, n_seq)
         return sequence
-
-    # @staticmethod
-    # def get_enzymes_seq_names_data(enzyme_file_path):
-    #     enzymes_seq_names = {}
-    #     tree = e_tree.parse(enzyme_file_path)
-    #     root_element = tree.getroot()
-    #     enzyme_objs = root_element.findall('enzyme')
-    #     for enzyme_obj in enzyme_objs:
-    #         name = str(enzyme_obj.find('name').text)
-    #         sequence = str(enzyme_obj.find('recognition_site_1').text)
-    #         sequence = sequence.replace('↑', '')
-    #         if sequence not in enzymes_seq_names:
-    #             enzymes_seq_names[sequence] = list()
-    #         enzymes_seq_names[sequence].append(name)
-    #     return enzymes_seq_names
 
     def process_multi_nucleotides(self, enzymes_seq_names):
         transformer = TransformationHelper()
@@ -131,3 +151,7 @@ if __name__ == "__main__":
     # patts = EnzymesReader.process_multi_nucleotides(enzymes_seq_names_test)
     # for p in patts:
     #    print(str(p))
+    er = EnzymesReader()
+    patts = er.get_all_sib_patterns()
+    for p in patts:
+        print(str(p))

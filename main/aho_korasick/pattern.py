@@ -17,6 +17,9 @@ class Pattern:
     def get_names(self):
         return self.names
 
+    def add_name(self, name):
+        self.names.append(name)
+
     def get_seq(self):
         return self.seq
 

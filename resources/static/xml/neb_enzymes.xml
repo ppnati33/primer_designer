@@ -576,627 +576,627 @@
 	</enzyme>
 	<enzyme>
 		<name>Tth111I, PflFI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GACN↑NNGTC</recognition_site_1>
+		<recognition_site_2>CTGNN↓NCAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PshAI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GACNN↑NNGTC</recognition_site_1>
+		<recognition_site_2>CTGNN↓NNCAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AhdI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GACNNN↑NNGTC</recognition_site_1>
+		<recognition_site_2>CTGNN↓NNNCAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>DrdI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GACNNNN↑NNGTC</recognition_site_1>
+		<recognition_site_2>CTGNN↓NNNNCAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Eco53kI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAG↑CTC</recognition_site_1>
+		<recognition_site_2>CTC↓GAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SacI, SacI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAGCT↑C</recognition_site_1>
+		<recognition_site_2>C↓TCGAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BseRI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAGGAG(N)10↑</recognition_site_1>
+		<recognition_site_2>CTCCTC(N)8↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PleI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAGTC(N)4↑</recognition_site_1>
+		<recognition_site_2>CTCAG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nt.BstNBI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAGTCNNNN↑N</recognition_site_1>
+		<recognition_site_2>CTCAGNNNNN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>MlyI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAGTC(N)5↑</recognition_site_1>
+		<recognition_site_2>CTCAG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HinfI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑ANTC</recognition_site_1>
+		<recognition_site_2>CTNA↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>EcoRV, EcoRV-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GAT↑ATC</recognition_site_1>
+		<recognition_site_2>CTA↓TAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>MboI, Sau3AI, DpnII, BfuCI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>↑GATC</recognition_site_1>
+		<recognition_site_2>CTAG↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>DpnI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GA↑TC</recognition_site_1>
+		<recognition_site_2>CT↓AG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsaBI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GATNN↑NNATC</recognition_site_1>
+		<recognition_site_2>CTANN↓NNTAG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>TfiI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑AWTC</recognition_site_1>
+		<recognition_site_2>CTWA↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsrDI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCAATGNN↑</recognition_site_1>
+		<recognition_site_2>CGTTAC↓NN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nb.BsrDI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCAATGNN</recognition_site_1>
+		<recognition_site_2>CGTTAC↓NN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BbvI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCAGC(N)8↑</recognition_site_1>
+		<recognition_site_2>CGTCG(N)12↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BtsI BtsαI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCAGTGNN↑</recognition_site_1>
+		<recognition_site_2>CGTCAC↓NN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nb.BtsI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCAGTGNN</recognition_site_1>
+		<recognition_site_2>CGTCAC↓NN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BstAPI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCANNNN↑NTGC</recognition_site_1>
+		<recognition_site_2>CGTN↓NNNNACG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SfaNI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCATC(N)5↑</recognition_site_1>
+		<recognition_site_2>CGTAG(N)9↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SphI, SphI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCATG↑C</recognition_site_1>
+		<recognition_site_2>C↓GTACG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SrfI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCCC↑GGGC</recognition_site_1>
+		<recognition_site_2>CGGG↓CCCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NmeAIII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCCGAG(N)20↑</recognition_site_1>
+		<recognition_site_2>CGGCTC(N)15↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NaeI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCC↑GGC</recognition_site_1>
+		<recognition_site_2>CGG↓CCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NgoMIV</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑CCGGC</recognition_site_1>
+		<recognition_site_2>CGGCC↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BglI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCCNNNN↑NGGC</recognition_site_1>
+		<recognition_site_2>CGGN↓NNNNCCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AsiSI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCGAT↑CGC</recognition_site_1>
+		<recognition_site_2>CGC↓TAGCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BtgZI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCGATG(N)10↑</recognition_site_1>
+		<recognition_site_2>CGCTAC(N)14↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HinP1I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑CGC</recognition_site_1>
+		<recognition_site_2>CGC↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HhaI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCG↑C</recognition_site_1>
+		<recognition_site_2>C↓GCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BssHII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑CGCGC</recognition_site_1>
+		<recognition_site_2>CGCGC↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NotI, NotI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GC↑GGCCGC</recognition_site_1>
+		<recognition_site_2>CGCCGG↓CG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Fnu4HI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GC↑NGC</recognition_site_1>
+		<recognition_site_2>CGN↓CG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Cac8I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCN↑NGC</recognition_site_1>
+		<recognition_site_2>CGN↓NCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>MwoI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCNNNNN↑NNGC</recognition_site_1>
+		<recognition_site_2>CGNN↓NNNNNCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NheI, NheI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑CTAGC</recognition_site_1>
+		<recognition_site_2>CGATC↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BmtI, BmtI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCTAG↑C</recognition_site_1>
+		<recognition_site_2>C↓GATCG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SapI, BspQI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCTCTTCN↑</recognition_site_1>
+		<recognition_site_2>CGAGAAG(N)4↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nt.BspQI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GCTCTTCN↑</recognition_site_1>
+		<recognition_site_2>CGAGAAGN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BlpI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GC↑TNAGC</recognition_site_1>
+		<recognition_site_2>CGANT↓CG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>TseI, ApeKI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑CWGC</recognition_site_1>
+		<recognition_site_2>CGWC↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Bsp1286I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GDGCH↑C</recognition_site_1>
+		<recognition_site_2>C↓HCGDG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AlwI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGATC(N)4↑</recognition_site_1>
+		<recognition_site_2>CCTAG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nt.AlwI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGATCNNNN↑N</recognition_site_1>
+		<recognition_site_2>CCTAGNNNNN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BamHI, BamHI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GATCC</recognition_site_1>
+		<recognition_site_2>CCTAG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>FokI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGATG(N)9↑</recognition_site_1>
+		<recognition_site_2>CCTAC(N)13↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BtsCI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGATGNN↑</recognition_site_1>
+		<recognition_site_2>CCTAC↓NN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HaeIII, PhoI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GG↑CC</recognition_site_1>
+		<recognition_site_2>CC↓GG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>FseI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGCCGG↑CC</recognition_site_1>
+		<recognition_site_2>CC↓GGCCGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SfiI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGCCNNNN↑NGGCC</recognition_site_1>
+		<recognition_site_2>CCGGN↓NNNNCCGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NarI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GG↑CGCC</recognition_site_1>
+		<recognition_site_2>CCGC↓GG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>KasI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GCGCC</recognition_site_1>
+		<recognition_site_2>CCGCG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SfoI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGC↑GCC</recognition_site_1>
+		<recognition_site_2>CCG↓CGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PluTI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGCGC↑C</recognition_site_1>
+		<recognition_site_2>C↓CGCGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AscI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GG↑CGCGCC</recognition_site_1>
+		<recognition_site_2>CCGCGC↓GG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>EciI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGCGGA(N)11↑</recognition_site_1>
+		<recognition_site_2>CCGCCT(N)9↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsmFI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGGAC(N)10↑</recognition_site_1>
+		<recognition_site_2>CCCTG(N)14↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>ApaI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGGCC↑C</recognition_site_1>
+		<recognition_site_2>C↓CCGGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PspOMI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GGCCC</recognition_site_1>
+		<recognition_site_2>CCCGG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Sau96I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GNCC</recognition_site_1>
+		<recognition_site_2>CCNG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NlaIV</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGN↑NCC</recognition_site_1>
+		<recognition_site_2>CCN↓NGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>KpnI, KpnI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGTAC↑C</recognition_site_1>
+		<recognition_site_2>C↓CATGG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Acc65I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GTACC</recognition_site_1>
+		<recognition_site_2>CCATG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsaI, BsaI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGTCTCN↑</recognition_site_1>
+		<recognition_site_2>CCAGAG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HphI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GGTGA(N)8↑</recognition_site_1>
+		<recognition_site_2>CCACT(N)7↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BstEII,  BstEII-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GTNACC</recognition_site_1>
+		<recognition_site_2>CCANTG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AvaII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GWCC</recognition_site_1>
+		<recognition_site_2>CCWG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BanI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑GYRCC</recognition_site_1>
+		<recognition_site_2>CCRYG↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BaeGI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GKGCM↑C</recognition_site_1>
+		<recognition_site_2>C↓MCGKG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsaHI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GR↑CGYC</recognition_site_1>
+		<recognition_site_2>CYGC↓RG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BanII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GRGCY↑C</recognition_site_1>
+		<recognition_site_2>C↓YCGRG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>RsaI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GT↑AC</recognition_site_1>
+		<recognition_site_2>CA↓TG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>CviQI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑TAC</recognition_site_1>
+		<recognition_site_2>CAT↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BstZ17I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTA↑TAC</recognition_site_1>
+		<recognition_site_2>CAT↓ATG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BstZ17I-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTA↑TAC</recognition_site_1>
+		<recognition_site_2>CAT↓ATG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BciVI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTATCC(N)6↑</recognition_site_1>
+		<recognition_site_2>CATAGG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SalI, SalI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑TCGAC</recognition_site_1>
+		<recognition_site_2>CAGCT↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Nt.BsmAI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTCTCN↑N</recognition_site_1>
+		<recognition_site_2>CAGAGNN</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsmAI, BcoDI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTCTCN↑</recognition_site_1>
+		<recognition_site_2>CAGAG(N)5↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>ApaLI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>G↑TGCAC</recognition_site_1>
+		<recognition_site_2>CACGT↓G</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsgI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTGCAG(N)16↑</recognition_site_1>
+		<recognition_site_2>CACGTC(N)14↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>AccI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GT↑MKAC</recognition_site_1>
+		<recognition_site_2>CAKM↓TG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Hpy166II</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTN↑NAC</recognition_site_1>
+		<recognition_site_2>CAN↓NTG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Tsp45I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>↑GTSAC</recognition_site_1>
+		<recognition_site_2>CASTG↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HpaI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTT↑AAC</recognition_site_1>
+		<recognition_site_2>CAA↓TTG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PmeI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTTT↑AAAC</recognition_site_1>
+		<recognition_site_2>CAAA↓TTTG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HincII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GTY↑RAC</recognition_site_1>
+		<recognition_site_2>CAR↓YTG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsiHKAI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>GWGCW↑C</recognition_site_1>
+		<recognition_site_2>C↓WCGWG</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>ApoI, ApoI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>R↑AATTY</recognition_site_1>
+		<recognition_site_2>YTTAA↓R</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NspI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>RCATG↑Y</recognition_site_1>
+		<recognition_site_2>Y↓GTACR</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BsrFI, BsrFαI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>R↑CCGGY</recognition_site_1>
+		<recognition_site_2>YGGCC↓R</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BstYI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>R↑GATCY</recognition_site_1>
+		<recognition_site_2>YCTAG↓R</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HaeII</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>RGCGC↑Y</recognition_site_1>
+		<recognition_site_2>Y↓CGCGR</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>CviKI-1</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>RG↑CY</recognition_site_1>
+		<recognition_site_2>YC↓GR</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>EcoO109I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>RG↑GNCCY</recognition_site_1>
+		<recognition_site_2>YCCNG↓GR</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PpuMI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>RG↑GWCCY</recognition_site_1>
+		<recognition_site_2>YCCWG↓GR</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>I-CeuI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TAACTATAACGGTCCTAA↑GGTAGCGAA</recognition_site_1>
+		<recognition_site_2>ATTGATATTGCCAG↓GATTCCATCGCTT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>SnaBI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TAC↑GTA</recognition_site_1>
+		<recognition_site_2>ATG↓CAT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>I-SceI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TAGGGATAA↑CAGGGTAAT</recognition_site_1>
+		<recognition_site_2>ATCCC↓TATTGTCCCATTA</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BspHI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>T↑CATGA</recognition_site_1>
+		<recognition_site_2>AGTAC↓T</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BspEI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>T↑CCGGA</recognition_site_1>
+		<recognition_site_2>AGGCC↓T</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>MmeI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TCCRAC(N)20↑</recognition_site_1>
+		<recognition_site_2>AGGYTG(N)18↓</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>TaqαI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>T↑CGA</recognition_site_1>
+		<recognition_site_2>AGC↓T</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>NruI, NruI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TCG↑CGA</recognition_site_1>
+		<recognition_site_2>AGC↓GCT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Hpy188I</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TCN↑GA</recognition_site_1>
+		<recognition_site_2>AG↓NCT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>Hpy188III</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TC↑NNGA</recognition_site_1>
+		<recognition_site_2>AGNN↓CT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>XbaI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>T↑CTAGA</recognition_site_1>
+		<recognition_site_2>AGATC↓T</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>BclI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>T↑GATCA</recognition_site_1>
+		<recognition_site_2>ACTAG↓T</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>HpyCH4V</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TG↑CA</recognition_site_1>
+		<recognition_site_2>AC↓GT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>FspI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TGC↑GCA</recognition_site_1>
+		<recognition_site_2>ACG↓CGT</recognition_site_2>
 	</enzyme>
 	<enzyme>
 		<name>PI-PspI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
+		<recognition_site_1>TGGCAAACAGCTATTAT↑GGGTATTATGGGT</recognition_site_1>
+		<recognition_site_2>ACCGTTTGTCGAT↓AATACCCATAATACCCCA</recognition_site_2>
 	</enzyme>
-	<enzyme>
-		<name>MscI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>BsrGI, BsrGI-HF</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>MseI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>PacI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>PsiI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>BstBI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>DraI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>PspXI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>BsaWI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>BsaAI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
-	<enzyme>
-		<name>EaeI</name>
-		<recognition_site_1></recognition_site_1>
-		<recognition_site_2></recognition_site_2>
-	</enzyme>
+	<!--<enzyme>-->
+		<!--<name>MscI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>BsrGI, BsrGI-HF</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>MseI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>PacI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>PsiI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>BstBI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>DraI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>PspXI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>BsaWI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>BsaAI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
+	<!--<enzyme>-->
+		<!--<name>EaeI</name>-->
+		<!--<recognition_site_1></recognition_site_1>-->
+		<!--<recognition_site_2></recognition_site_2>-->
+	<!--</enzyme>-->
 </enzymes>
